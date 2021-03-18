@@ -1,1 +1,9 @@
-export const routes =[];
+ const sections =[
+     "home",
+     "science",
+     "technology"
+ ]
+
+
+
+ export default sections
