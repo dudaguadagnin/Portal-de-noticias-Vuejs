@@ -1,14 +1,12 @@
 <template>
   <div>
-
-
-
-
     <nav class="navbar navbar-expand-lg navbar-home">
       <a class="navbar-brand" href="#" v-on:click="getNoticia('home')">Home</a>
       <a class="navbar-brand" href="#" v-on:click="getNoticia('science')">Science</a>
       <a class="navbar-brand" href="#" v-on:click="getNoticia('technology')">Technology</a>
     </nav>
+
+    
 
     <Layout>
       <novoCard :posts="noticias" />
@@ -23,6 +21,7 @@ import axios from "axios";
 import Layout from "./components/Layout";
 import novoCard from "./components/novoCard";
 
+
 export default {
   data() {
     return {
@@ -34,8 +33,10 @@ export default {
     // Cabecalho,
     Layout,
     novoCard,
+
   },
 
+  
   mounted() {
    this.getNoticia("home");
 

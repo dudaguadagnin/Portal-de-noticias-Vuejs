@@ -1,28 +1,39 @@
 <template>
   <div>
+    
+    
+
     <div class="row">
       <div class="col-sm-6 responsiv">
         <div class="card mb-3" style="width: 18rem" v-for="post in posts">
+
           <a :href="post.url" target="_blanck">
-            <img
-              class="imagem-responsiva"
-              :src="post.multimedia[0].url"
-              alt=""
-            />
+            <img class="imagem-responsiva" :src="post.multimedia[0].url"/>
           </a>
+
           <div class="card-body">
             <h5 class="card-title">{{ post.title }}</h5>
             <p class="card-text">{{ post.abstract }}</p>
             <a :href="post.url" class="btn btn-primary">Go somewhere</a>
+            <modal :title="title"/>
+            <button type="button" class="btn btn-primary" @click="$root.$emit('open-modal')">modal</button>
+        
           </div>
+          
+        
+
+
         </div>
+        
+
       </div>
     </div>
+  
   </div>
 </template>
 
 <script>
-import "bootstrap/dist/css/bootstrap.css";
+import Modal from "./Modal"
 
 export default {
   props: {
@@ -31,9 +42,10 @@ export default {
       required: true,
     },
   },
-  data() {
-    return { showModal: false };
+  components:{
+    Modal
   },
+
 };
 </script>
 
