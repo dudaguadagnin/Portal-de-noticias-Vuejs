@@ -6,7 +6,7 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">{{title}}</h5>
+            <h5 class="modal-title" id="exampleModalLabel">{{data.title}}</h5>
             <button
               type="button" class="close" data-dismiss="modal" aria-label="Close" @click="visible = false">
               <span aria-hidden="true">&times;</span>
@@ -30,8 +30,13 @@
 </template>
 
 <script>
+['data']
 export default {
-    props: ["title","abstract", "url"],
+    props:{
+      data:{
+        type: String
+      }
+    },
 
 data(){
     return{
@@ -39,7 +44,15 @@ data(){
     }
 },
 created(){
-    this.$root.$on('open-modal', () => {this.visible = true})
+   // this.$root.$on('open-modal', () => {this.visible = true})
+   this.showModal('post', () => {this.visible = true})
+
+},
+methods:{
+  showModal(post){
+      this.modalData = post
+      //abrir modal
+    }
 }
 
 

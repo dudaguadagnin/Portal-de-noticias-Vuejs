@@ -1,7 +1,28 @@
 <template>
   <div>
-    
-    
+    <!-- 
+    <modal v-if="showModal" :data="modalData"></modal>
+    <button type="button" class="btn btn-primary" @click="showModal(post)"></button>
+    showModal(post){
+      this.modalData = post
+      //abrir modal
+    }
+
+    <modal v-if="showModal" :abstract="abstract" :title="title" :url="url"></modal>
+    <button type="button" class="btn btn-primary" @click="showModal(post)"></button>
+    showModal(post){
+      this.abstract = post.abstract
+      this.title = post.title
+      this.url = post.url
+    }
+    <modal v-if="showModal" :abstract="abstract" :title="title" :url="url"></modal>
+    <button type="button" class="btn btn-primary" @click="showModal(post.abstract, post.title, post.link)"></button>
+    showModal(abstract, title, url){
+      this.abstract = abstract
+      this.title = title
+      this.url = url
+    }
+-->
 
     <div class="row">
       <div class="col-sm-6 responsiv">
@@ -15,20 +36,16 @@
             <h5 class="card-title">{{ post.title }}</h5>
             <p class="card-text">{{ post.abstract }}</p>
             <a :href="post.url" class="btn btn-primary">Go somewhere</a>
-            <modal :title="title"/>
-            <button type="button" class="btn btn-primary" @click="$root.$emit('open-modal')">modal</button>
-        
-          </div>
-          
-        
+            
+            <button type="button" class="btn btn-primary" @click="showModal('post')">modal</button>
 
+          </div>
 
         </div>
-        
-
       </div>
     </div>
-  
+    <modal v-if="showModal" :data="modalData"></modal>
+
   </div>
 </template>
 
@@ -45,6 +62,13 @@ export default {
   components:{
     Modal
   },
+
+    showModal(post){
+      this.modalData = post
+      //abrir modal
+    }
+
+  
 
 };
 </script>
@@ -80,6 +104,16 @@ export default {
 
 
 <!--
+  <button type="button" class="btn btn-primary" @click="$root.$emit('open-modal')">modal</button>
+
+
+
+
+
+
+
+
+
 <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Open Modal</button>
 
  Modal 
