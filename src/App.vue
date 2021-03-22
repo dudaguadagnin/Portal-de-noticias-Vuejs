@@ -1,13 +1,8 @@
 <template>
   <div>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-home">
-      <a class="navbar-brand" href="#" v-on:click="getNoticia('home')">Home</a>
-      <a class="navbar-brand" href="#" v-on:click="getNoticia('science')">Science</a>
-      <a class="navbar-brand" href="#" v-on:click="getNoticia('technology')">Technology</a>
-    </nav>
-  
+    <Navbar @home="getNoticia('home')" @science="getNoticia('science')" @technology="getNoticia('technology')"  />
     <Grid>
-      <novoCard :posts="noticias" />
+      <NovoCard :posts="noticias" />
     </Grid>
   </div>
 </template>
@@ -15,7 +10,8 @@
 <script>
 import axios from "axios";
 import Grid from "./components/Grid";
-import novoCard from "./components/novoCard";
+import NovoCard from "./components/NovoCard";
+import Navbar from './components/Navbar';
 
 export default {
   data() {
@@ -26,7 +22,8 @@ export default {
 
   components: {
     Grid,
-    novoCard,
+    NovoCard,
+    Navbar,
   },
 
   mounted() {
@@ -42,18 +39,11 @@ export default {
         })
         .catch((err) => console.log(err));
     },
+    
   },
 };
 </script>
 
 <style>
-.navbar {
-  background-color: darkcyan;
-}
-.navbar-home a {
-  color: #fff;
-}
-.navbar-home a:hover {
-  color: #000;
-}
+
 </style>
