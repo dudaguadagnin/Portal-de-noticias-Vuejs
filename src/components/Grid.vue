@@ -1,6 +1,6 @@
 <template>
-  <div class="card-columns">
-    <div class="col-sm-12">
+  <div class="card-columns cor">
+    <div class=" col-6">
       <main class="container flex-grow px-4 mx-auto my-12">
         <slot />
       </main>
@@ -10,6 +10,10 @@
 
 <script>
 export default {
-  components: {},
 };
 </script>
+<style scoped>
+.cor{
+  background-color: ghostwhite;
+}
+</style>
