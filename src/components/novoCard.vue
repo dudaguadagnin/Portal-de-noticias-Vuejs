@@ -3,12 +3,12 @@
     <div class="row ">
       <div class="col-sm-6 responsiv">
         <div @click="showModal(post)" class="card mb-3 clique" style="width: 18rem" v-for="post in posts">
-          <a   target="_blanck">
-            <img  class="imagem-responsiva" :src="post.multimedia[0].url"/>
+          <a target="_blanck">
+            <img class="imagem-responsiva" :src="post.multimedia[0].url"/>
           </a>
           <div class="card-body">
             <h5 class="card-title">{{ post.title }}</h5>
-          </div>
+          </div> 
         </div>
       </div>
     </div>
