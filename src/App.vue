@@ -4,7 +4,7 @@
     <Grid @science="getNoticia('science')" @technology="getNoticia('technology')">
       <NovoCard :posts="noticias" />
     </Grid>
-    <Footer />
+    
   </div>
 </template>
 
@@ -13,7 +13,6 @@ import axios from "axios";
 import Grid from "./components/noticias/Grid";
 import NovoCard from "./components/noticias/NovoCard";
 import Navbar from './components/barra de navegacao/Navbar';
-import Footer from './components/rodape/Footer';
 
 export default {
   data() {
@@ -26,7 +25,6 @@ export default {
     Grid,
     NovoCard,
     Navbar,
-    Footer
   },
 
   mounted() {
