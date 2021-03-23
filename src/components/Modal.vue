@@ -11,7 +11,8 @@
             </button>
           </div>
           <div class="modal-body">
-              <p>{{abstract}}</p><a class="alink" :href=url> click to access</a>
+              <p>{{abstract}}</p>
+              <a class="alink" :href=url> click to access</a>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" @click="$emit('close')">Close</button>
