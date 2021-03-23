@@ -1,8 +1,9 @@
 <template>
-  <div>
+<div class="">
+  <div class="container">
     <div class="row">
-      <div class="col-sm-6 responsiv">
-        <div @click="showModal(post)" class="card mb-3 clique" style="width: 18rem" v-for="post in posts" v-bind:key="post">
+      <div class="col-md-4 responsiv">
+        <div @click="showModal(post)" class="card mb-4 shadow-sm clique" style="width: 18rem" v-for="post in posts" v-bind:key="post">
           <a target="_blanck">
             <img class="imagem-responsiva" :src="post.multimedia[0].url" />
           </a>
@@ -14,6 +15,7 @@
     </div>
     <Modal v-if="Modalshow" :title="title" :abstract="abstract" :url="url" @close="Modalshow = false"></Modal>
   </div>
+</div>
 </template>
 
 <script>

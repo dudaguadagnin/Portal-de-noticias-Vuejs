@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar @home="getNoticia('home')" @science="getNoticia('science')" @technology="getNoticia('technology')"  />
-    <Grid>
+    <Grid @science="getNoticia('science')" @technology="getNoticia('technology')">
       <NovoCard :posts="noticias" />
     </Grid>
   </div>
