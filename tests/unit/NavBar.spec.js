@@ -1,4 +1,4 @@
-import NavBar from '@/components/NavBar';
+import NavBar from '@/components/barra-de-navegacao/NavBar';
 import { mount } from '@vue/test-utils'
 
 describe('NavBar', () => {

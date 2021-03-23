@@ -1,4 +1,4 @@
-import NovoCard from '@/components/NovoCard.vue'
+import NovoCard from '@/components/noticias/NovoCard.vue'
 import { mount} from '@vue/test-utils'
 
 test('contenha modal dentro do card', async () => {

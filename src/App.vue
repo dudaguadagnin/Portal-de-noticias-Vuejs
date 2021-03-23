@@ -12,7 +12,7 @@
 import axios from "axios";
 import Grid from "./components/noticias/Grid";
 import NovoCard from "./components/noticias/NovoCard";
-import Navbar from './components/barra de navegacao/Navbar';
+import Navbar from './components/barra-de-navegacao/Navbar';
 
 export default {
   data() {
