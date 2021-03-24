@@ -4,12 +4,27 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!--
+    aciona a seção home
+    @event home
+  -->
       <a class="navbar-brand active" href="#" @click="$emit('home')">Portal de Notícias</a>
 
       <div class="collapse navbar-collapse cor" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item"><a class="nav-link" href="#" @click="$emit('science')">Science </a> </li>
-          <li class="nav-item"><a class="nav-link" href="#" @click="$emit('technology')">Technology</a></li>           
+          <li class="nav-item">
+            <!--
+            aciona a seção science
+            @event science
+          -->
+            <a class="nav-link" href="#" @click="$emit('science')">Science </a> </li>
+
+          <li class="nav-item">
+            <!--
+              aciona a seção technology
+              @event technology
+            -->
+            <a class="nav-link" href="#" @click="$emit('technology')">Technology</a></li>           
         </ul>
       </div>
     </nav>

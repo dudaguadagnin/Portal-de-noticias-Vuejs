@@ -20,13 +20,24 @@
 
 <script>
 import Modal from "./Modal";
+/**
+   * Onde é criado as caixas de noticias.
+   * @displayName Card
+    * @example ./NovoCard.md
+   */
 export default {
   props: {
+    /**
+       * Array de notícias.
+       */
     posts: {
       type: Array,
       required: true,
     },
   },
+  /**
+    * Componente de exibição de modal
+    */
   components: {
     Modal,
   },

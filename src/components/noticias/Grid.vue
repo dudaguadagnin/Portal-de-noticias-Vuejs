@@ -5,7 +5,15 @@
       <h1 class="jumbotron-heading">Welcome to the News Portal!</h1>
           <p class="lead text-muted">Access the sections</p>
           <p>
+            <!--
+            aciona a seção science
+            @event science
+          -->
             <a href="#" class="btn btn-primary my-2" @click="$emit('science')">Science</a>
+            <!--
+              aciona a seção technology
+              @event technology
+            -->
             <a href="#" class="btn btn-secondary my-2" @click="$emit('technology')">Technology</a>
           </p>
     </div>
@@ -27,6 +35,10 @@
 </template>
 
 <script>
+/**
+   * Orgaliza o grid dos cards de noticia.
+   * @displayName Grid
+   */
 export default {
 };
 </script>
