@@ -22,7 +22,7 @@
 import Modal from "./Modal";
 /**
    * Onde é criado as caixas de noticias.
-   * @displayName Card
+   
     * @example ./NovoCard.md
    */
 export default {
