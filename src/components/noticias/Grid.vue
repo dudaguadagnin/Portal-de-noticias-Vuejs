@@ -34,7 +34,7 @@
 
 <script>
 /**
-   * Orgaliza o grid dos cards de noticia.
+   * Orgaliza o grid dos cards de noticia. E apresenta duas opções de botao para o usuario escolher a seção de noticias
    * @displayName Grid
    */
 export default {

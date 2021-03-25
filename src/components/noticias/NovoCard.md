@@ -1,7 +1,9 @@
+NovoCard example:
 
 ```vue
 <template>
-  <div>          
+
+  <div>   
     <div class="card mb-4 shadow-sm clique" style="width: 18rem">
       <a target="_blanck">
         <img class="imagem" src="https://i1.wp.com/www.multarte.com.br/wp-content/uploads/2019/01/fundo-cor-dourada-ouro8.jpg?fit=696%2C696&ssl=1" />
@@ -12,7 +14,6 @@
     </div>
   </div>
 </template>
-
 <style scoped>
 
 .imagem{

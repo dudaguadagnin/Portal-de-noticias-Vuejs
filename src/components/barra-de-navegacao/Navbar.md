@@ -1,8 +1,8 @@
+NavBar example:
 ```vue
-
-
 <template>
   <div>
+  <NavBar>
     <nav class="navbar sticky-top navbar-dark bg-dark nav-cor">
       <button class="navbar-toggler" 
         type="button" 
@@ -26,6 +26,7 @@
         </ul>
       </div>
     </nav>
+    </NavBar>
   </div>
 </template>
 
