@@ -4,7 +4,7 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" >{{title}}</h5>
+            <h5 class="modal-title">{{title}}</h5>
             <button
               type="button" class="close" data-dismiss="modal" aria-label="Close" @click="$emit('close')" >
               <span aria-hidden="true">&times;</span>
@@ -12,13 +12,13 @@
           </div>
           <div class="modal-body">
               <p>{{abstract}}</p>
-              <a class="alink" :href=url> click to access</a>
+              <a class="alink" :href=url>click to access</a>
           </div>
           <div class="modal-footer">
              <!--
-    ao clicar emite fechamento do modal
-    @event close
-  -->
+              ao clicar emite fechamento do modal
+              @event close
+            -->
             <button type="button" class="btn btn-secondary" @click="$emit('close')">Close</button>
           </div>
         </div>

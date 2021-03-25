@@ -3,12 +3,12 @@
   <section class="jumbotron text-center">
     <div class="container">
       <h1 class="jumbotron-heading">Welcome to the News Portal!</h1>
-          <p class="lead text-muted">Access the sections</p>
+        <p class="lead text-muted">Access the sections</p>
           <p>
             <!--
-            aciona a seção science
-            @event science
-          -->
+              aciona a seção science
+              @event science
+            -->
             <a href="#" class="btn btn-primary my-2" @click="$emit('science')">Science</a>
             <!--
               aciona a seção technology
@@ -19,18 +19,16 @@
     </div>
   </section >
 
-
   <div class="card-columns cor espaco">
     <div class=" col-6 ">
       <main class="container flex-grow px-4 mx-auto my-12 ">
+        <!--
+          @slot permite a inserção dos componente de criação de cards no grid
+        -->
         <slot />
       </main>
     </div>
   </div>
-
-
-
-
 </div>
 </template>
 
