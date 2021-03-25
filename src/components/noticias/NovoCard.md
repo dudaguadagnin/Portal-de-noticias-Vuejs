@@ -1,17 +1,21 @@
 
-
 ```vue
-//recebe array de posts(noticias)
-<div class="row">
-      <div class="col-md-4">
-        <div class="card mb-4 shadow-sm clique" style="width: 18rem" v-for="post in posts">
-          <a target="_blanck">
-            <img class="imagem-responsiva" :src="post.multimedia[0].url" />
-          </a>
-          <div class="card-body">
-            <h5 class="card-title">{{ post.title }}</h5>
+<template>
+
+          <div class="card mb-4 shadow-sm clique" style="width: 18rem;">
+            <a target="_blanck">
+              <img class="imagem" src="https://i1.wp.com/www.multarte.com.br/wp-content/uploads/2019/01/fundo-cor-dourada-ouro8.jpg?fit=696%2C696&ssl=1" />
+            </a>
+            <div class="card-body">
+              <h5 class="card-title">Titulo Exemplo</h5>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+
+</template>
+<style scoped>
+.imagem{
+  width:100%;
+}
+
+</style>
 ```

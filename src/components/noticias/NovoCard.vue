@@ -1,5 +1,4 @@
 <template>
-<div class="">
   <div class="container">
     <div class="row">
       <div class="col-md-4 responsiv">
@@ -15,15 +14,13 @@
     </div>
     <Modal v-if="Modalshow" :title="title" :abstract="abstract" :url="url" @close="Modalshow = false"></Modal>
   </div>
-</div>
+
 </template>
 
 <script>
 import Modal from "./Modal";
 /**
    * Onde é criado as caixas de noticias.
-   
-    * @example ./NovoCard.md
    */
 export default {
   props: {
